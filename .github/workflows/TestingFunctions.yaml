@@ -38,6 +38,8 @@ jobs:
             -o Dpkg::Options::="--path-exclude=/usr/share/doc/*" \
             -o Dpkg::Options::="--path-exclude=/usr/share/locale/*" \
             python3-numpy python3-matplotlib
+      - name: Make grader executable
+        run: chmod +x ./Project_3_Grader
       - name: Grade Project 3 Submission
         if: ${{ always() }}
         run: |
